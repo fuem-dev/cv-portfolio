@@ -3,7 +3,7 @@
 export default function AboutSection() {
     return (
       <section className="max-w-3xl mx-auto py-20 px-4">
-        <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">
+        <h2 className="text-3xl font-bold mb-6 text-center h2_css">
           Sobre mí
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed">
