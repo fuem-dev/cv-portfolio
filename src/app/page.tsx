@@ -11,15 +11,33 @@ const skills = [
 
 const projects = [
   {
-    title: "Portafolio Personal",
-    description: "Este sitio fue creado con Next.js, Tailwind y TypeScript.",
-    link: "https://github.com/fuem-dev/cv-portfolio"
+    title: "Weather App",
+    description: "A responsive weather app using Next.js and OpenWeather API.",
+    link: "https://weather-app.vercel.app",
+    repo: "https://github.com/fuem-dev/weather-app",
+    tech: ["Next.js", "Tailwind", "TypeScript"],
   },
   {
-    title: "Task Manager",
-    description: "Aplicación de tareas con Zustand y persistencia local.",
-    link: "https://github.com/fuem-dev/task-manager"
-  }
+    title: "Task Tracker",
+    description: "Minimal task manager using Zustand and Vite.",
+    link: "https://task-tracker.vercel.app",
+    repo: "https://github.com/fuem-dev/task-tracker",
+    tech: ["React", "Vite", "Zustand"],
+  },
+  {
+    title: "task App",
+    description: "a web Aplicatiosn that functions",
+    link: "https://weather-app.vercel.app",
+    repo: "https://github.com/fuem-dev/weather-app",
+    tech: ["Next.js", "Tailwind", "TypeScript"],
+  },
+  {
+    title: "App Tracker",
+    description: "Minimal source that i need",
+    link: "https://task-tracker.vercel.app",
+    repo: "https://github.com/fuem-dev/task-tracker",
+    tech: ["React", "Vite", "Zustand"],
+  },
 ];
 
 const career = [
@@ -40,7 +58,7 @@ const career = [
 export default function HomePage() {
   return (
     <>
-      <section id="home" className="flex flex-col items-center justify-center text-center py-32 px-4 min-h-screen">
+      <section id="home" className="flex flex-col items-center justify-center text-center px-4 min-h-screen">
         <HeroSection/>
       </section>
 
@@ -59,9 +77,14 @@ export default function HomePage() {
 
       <section id="projects" className="py-20 px-4 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center h2_css">Proyectos</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="flex gap-6 overflow-x-auto px-1 pb-4">
           {projects.map((project) => (
+            <div
+              key={project.title}
+              className="flex-shrink-0 w-[260px] snap-center"
+    >
             <ProjectCard key={project.title} {...project} />
+            </div>
           ))}
         </div>
       </section>
