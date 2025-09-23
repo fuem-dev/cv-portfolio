@@ -3,6 +3,7 @@ import SkillBadge from "@/components/SkillBadge";
 import ProjectCard from "@/components/ProjectCard";
 import CareerStep from "@/components/CareerStep";
 import HeroSection from "@/components/HeroSection";
+import ContactForm from "@/components/ContactForm";
 
 const skills = [
   "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS",
@@ -99,21 +100,7 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className="py-20 px-4 max-w-xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6 h2_css">Contacto</h2>
-        <p className="text-lg text-gray-700 mb-4">
-          ¿Quieres trabajar conmigo o charlar de algún proyecto?
-        </p>
-        <div className="space-y-2">
-          <p className="text-blue-700 font-medium">
-            📧 <a href="mailto:fuem.dev@gmail.com" className="underline">fuem.dev@gmail.com</a>
-          </p>
-          <p>
-            🔗 <a href="https://www.linkedin.com/in/fuem-dev" target="_blank" className="text-blue-700 underline">LinkedIn</a>
-          </p>
-          <p>
-            💻 <a href="https://github.com/fuem-dev" target="_blank" className="text-blue-700 underline">GitHub</a>
-          </p>
-        </div>
+        <ContactForm/>
       </section>
     </>
   );

@@ -1,4 +1,4 @@
-// src/components/CareerStep.tsx
+//*********** CareerStep.tsx
 
 interface CareerStepProps {
     role: string;
